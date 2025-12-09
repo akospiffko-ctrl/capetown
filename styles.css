@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c5f2d;
+    --secondary-color: #ff9800;
+    --accent-color: #00bcd4;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color), #1e4620);
+    color: var(--white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-dates {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: var(--white);
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.trip-dates {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.quick-links {
+    margin-bottom: 3rem;
+}
+
+.quick-links h2 {
+    text-align: center;
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.link-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.info-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.info-card h4 {
+    color: var(--secondary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--light-bg);
+}
+
+.info-card li:last-child {
+    border-bottom: none;
+}
+
+.info-card strong {
+    color: var(--primary-color);
+}
+
+.rental-section, .accommodation-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: 8px;
+}
+
+.accommodation-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.accommodation-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.accommodation-item p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+.phase-section {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.day-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.day-card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.day-card.travel-day {
+    border-left: 5px solid var(--accent-color);
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.day-header h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.accommodation-badge {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.travel-badge {
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--secondary-color);
+}
+
+.timeline-item {
+    position: relative;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.4rem;
+    top: 1.5rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    border: 2px solid var(--white);
+}
+
+.timeline-item.confirmed::before {
+    background: #4caf50;
+}
+
+.timeline-item.highlight {
+    background: linear-gradient(to right, #fff3e0, transparent);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-left: -1rem;
+    padding-left: 1rem;
+}
+
+.time {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+}
+
+.activity {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.activity-details {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+.transport-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.transport-badge.car {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.transport-badge.uber {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.options {
+    background: #f0f4f8;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-left: -1rem;
+}
+
+.activity-label {
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.option-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.option strong {
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.option-details {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.booking-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.booking-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.booking-card ul {
+    list-style: none;
+}
+
+.booking-card li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--light-bg);
+}
+
+.booking-card li:last-child {
+    border-bottom: none;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 0;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    margin-top: 4rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-title {
+        font-size: 1.2rem;
+    }
+
+    .day-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .link-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media print {
+    .navbar, .quick-links, footer {
+        display: none;
+    }
+
+    .day-card {
+        page-break-inside: avoid;
+    }
+}
